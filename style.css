@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+  --input-errors: hsl(0, 100%, 66%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+}
+main {
+  display: flex;
+  height: 100vh;
+}
+main .left-container {
+  background-image: url("images/bg-main-desktop.png");
+  background-size: cover;
+  position: relative;
+  flex-basis: 30%;
+  color: var(--White);
+}
+main .left-container .image {
+  width: 300px;
+  height: 165px;
+  position: absolute;
+  right: 0;
+  padding: 20px;
+}
+main .left-container .front-image {
+  transform: translateX(40%);
+  top: 20%;
+}
+main .left-container .back-image {
+  transform: translateX(50%);
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media (max-width: 991px) {
+  main .left-container .front-image {
+    top: 5%;
+  }
+  main .left-container .back-image {
+    top: 70%;
+  }
+}
+
+@media (max-width: 767px) {
+  main {
+    flex-direction: column;
+  }
+  main .left-container {
+    background-image: url("images/bg-main-mobile.png");
+  }
+  main .left-container .front-image {
+    transform: translateX(50%);
+    top: 70%;
+    right: 50%;
+    z-index: 1;
+  }
+  main .left-container .back-image {
+    transform: translateX(0);
+    top: 20%;
+    right: 20px;
+  }
+}
+main .left-container .image img:first-of-type {
+  max-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+main .left-container .front-image .card-logo {
+  width: 4rem;
+}
+main .left-container .front-image .card-number {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+main .left-container .front-image .name-date {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+main .left-container .back-image .cvc {
+  font-size: 0.7rem;
+  margin-right: 1rem;
+  margin-bottom: 2px;
+  letter-spacing: 0.1rem;
+}
+
+/* ***************************************** */
+
+main .right-container {
+  flex-grow: 1;
+  background-color: var(--White);
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .right-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  width: 300px;
+}
+@media (max-width: 767px) {
+  main .right-container form {
+    margin-top: 50px;
+  }
+}
+main .right-container form .date-cvc {
+  display: flex;
+  justify-content: space-between;
+}
+main .right-container form .date-cvc > div {
+  width: 48%;
+}
+main .right-container form .date-cvc .month-year {
+  display: flex;
+  justify-content: space-between;
+}
+main .right-container form .date-cvc .month-year input {
+  width: 48%;
+}
+main .right-container form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--Very-dark-violet);
+}
+main .right-container form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--Light-grayish-violet);
+  border-radius: 6px;
+  color: var(--Very-dark-violet);
+  outline: none;
+}
+main .right-container form input ::placeholder {
+  color: var(--Light-grayish-violet);
+}
+main .right-container form .error {
+  display: none;
+  color: var(--input-errors);
+  font-size: 13px;
+  margin-top: 3px;
+}
+main .right-container button {
+  color: white;
+  background-color: var(--Very-dark-violet);
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+main .right-container button:hover {
+  background-color: hsl(278deg 68% 11% / 90%);
+}
+/* **************************************** */
+main .right-container .feedback-container {
+  display: none;
+  text-align: center;
+}
+
+main .right-container .feedback-container h2 {
+  color: var(--Very-dark-violet);
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin: 10px 0;
+}
+main .right-container .feedback-container p {
+  color: var(--Dark-grayish-violet);
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+main .right-container .feedback-container button {
+  width: 100%;
+}

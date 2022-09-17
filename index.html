@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" async></script>
+  </head>
+  <body>
+    <main>
+      <div class="left-container">
+        <div class="image front-image">
+          <img src="images/bg-card-front.png" alt="" />
+          <img src="images/card-logo.svg" alt="" class="card-logo" />
+          <div class="card-number" id="number">0000 0000 0000 0000</div>
+          <div class="name-date">
+            <div class="name" id="name">john doe</div>
+            <div class="date" id="date">00/00</div>
+          </div>
+        </div>
+        <div class="image back-image">
+          <img src="images/bg-card-back.png" alt="" />
+          <div class="cvc" id="cvc">000</div>
+        </div>
+      </div>
+      <div class="right-container">
+        <form action="">
+          <div>
+            <label for="cardholder">card holder</label>
+            <input type="text" id="cardholder" placeholder="e.g john doe" />
+            <p class="error">error</p>
+          </div>
+          <div>
+            <label for="cardnumber">card number</label>
+            <input
+              type="text"
+              id="cardnumber"
+              placeholder="e.g 1234 5678 9012 3456"
+            />
+            <p class="error">error</p>
+          </div>
+          <div class="date-cvc">
+            <div>
+              <label for="">exp. date (mm/yy)</label>
+              <div class="month-year">
+                <input type="number" id="month" placeholder="MM" />
+                <input type="number" id="year" placeholder="YY" />
+              </div>
+              <p class="error">error</p>
+            </div>
+            <div>
+              <label for="cvc">cvc</label>
+              <input type="text" id="cvc-label" placeholder="CVC" />
+              <p class="error">error</p>
+            </div>
+          </div>
+          <button id="send-btn">Confirm</button>
+        </form>
+        <!-- ********************** -->
+        <div class="feedback-container">
+          <img src="images/icon-complete.svg" alt="" />
+          <h2>thank you!</h2>
+          <p>We added you're card details!</p>
+          <button id="continue-btn">Continue</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
