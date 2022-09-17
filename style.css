@@ -56,25 +56,6 @@ main .left-container .back-image {
   }
 }
 
-@media (max-width: 767px) {
-  main {
-    flex-direction: column;
-  }
-  main .left-container {
-    background-image: url("images/bg-main-mobile.png");
-  }
-  main .left-container .front-image {
-    transform: translateX(50%);
-    top: 70%;
-    right: 50%;
-    z-index: 1;
-  }
-  main .left-container .back-image {
-    transform: translateX(0);
-    top: 20%;
-    right: 20px;
-  }
-}
 main .left-container .image img:first-of-type {
   max-width: 100%;
   position: absolute;
@@ -102,7 +83,42 @@ main .left-container .back-image .cvc {
   margin-bottom: 2px;
   letter-spacing: 0.1rem;
 }
+@media (max-width: 767px) {
+  main {
+    flex-direction: column;
+  }
+  main .left-container {
+    background-image: url("images/bg-main-mobile.png");
+  }
 
+  main .left-container .image {
+    width: 250px;
+  }
+  main .left-container .front-image {
+    transform: translateX(50%);
+    top: 70%;
+    right: 50%;
+    z-index: 1;
+  }
+  main .left-container .back-image {
+    transform: translateX(0);
+    top: 10%;
+    right: 20px;
+  }
+  main .left-container .front-image .card-logo {
+    width: 3rem;
+  }
+  main .left-container .front-image .card-number {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  main .left-container .front-image .name-date {
+    font-size: 0.6rem;
+  }
+  main .left-container .back-image .cvc {
+    margin-bottom: 30px;
+  }
+}
 /* ***************************************** */
 
 main .right-container {
